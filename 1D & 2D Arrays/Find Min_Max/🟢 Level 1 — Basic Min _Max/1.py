@@ -21,4 +21,6 @@ def mini(ar):
                 min_num = ar[i]
     return min_num
 print(mini([7, 3, 9, 2, 8, 5]))
-#Time Complexity O(n)
+
+#Time Complexity: O(n)
+#Space Complexity: O(1)

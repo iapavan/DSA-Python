@@ -15,3 +15,6 @@ def min_max_nums(ar):
             max_num = ar[i]
     return min_num, max_num
 print(min_max_nums([12, 5, 8, 1, 19, 4]))
+
+#Time Complexity: O(n)
+#Space Complexity: O(1)
