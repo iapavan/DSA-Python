@@ -13,15 +13,19 @@ Output: [4, 5, 2, 7]
 (Explanation: [4, 7, 2, 5], [2, 5, 4, 7], and [2, 7, 4, 5] are also accepted because indices 0 and 2 have even numbers, and indices 1 and 3 have odd numbers.)
 """
 def sort_array(nums):
-    odd_ptr= 1
+    odd_ptr= 1 #initialization
+    #need to check the even indices
     for even_ptr in range(0, len(nums), 2):
-        if nums[even_ptr]%2 == 1:
-            while nums[odd_ptr] % 2 == 0:
-                  nums[odd_ptr], nums[even_ptr] = nums[even_ptr], nums[odd_ptr]
-                  odd_ptr += 2
+        if nums[even_ptr]%2 == 1: # even_ptr for finding odd numbers
+            
+            while nums[odd_ptr] % 2 == 1: #even number to find an odd index
+               odd_ptr += 2
+            nums[odd_ptr], nums[even_ptr] = nums[even_ptr], nums[odd_ptr] #swap
             
     return nums
-nums = [4, 2, 5, 7]
+print(sort_array([3, 1, 2, 4]))
+print(sort_array([4,2,5, 7]))
+"""nums = [4, 2, 5, 7]
 k = sort_array(nums)
-print(k)
+print(k)"""
             
